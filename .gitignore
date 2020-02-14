@@ -5,3 +5,8 @@
 /backend/.env
 /backend/package.json
 /backend/package-lock.json
+/frontend/public
+/frontend/README.md
+/frontend/package.json
+/frontend/yarn.lock
+/frontend/node_modules
