@@ -1,0 +1,7 @@
+
+/.idea/
+/backend/node_modules/
+/backend/.babelrc
+/backend/.env
+/backend/package.json
+/backend/package-lock.json
