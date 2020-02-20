@@ -10,3 +10,4 @@
 /frontend/package.json
 /frontend/yarn.lock
 /frontend/node_modules
+/backend/src/services/db-connection.js

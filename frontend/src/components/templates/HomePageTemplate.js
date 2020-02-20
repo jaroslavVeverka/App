@@ -14,14 +14,16 @@ export function HomePageTemplate() {
         const fetchData = async () => {
             setIsLoading(true);
             try {
-                //const result = await api.get('/dd');
-                const result = await axios.get('http://localhost:3001/')
-                setDataDB(result.data[0].ID);
+                const result = await api.get('/');
+                console.log(result.data[0]);
+                setDataDB(result.data[0]);
             } catch (e) {
                 console.error(e);
                 setError(true);
+            } finally {
+                setIsLoading(false)
             }
-            setIsLoading(false)
+
         }
         fetchData()
     },[])
@@ -29,10 +31,10 @@ export function HomePageTemplate() {
     return (
         <Container>
             <Row>
-                    <h2>Ahoj, toto je uvodni page.</h2>
+                    <h2>Ahoj, toto je uvodni page  .</h2>
                     { isLoading ? (<div>Loading...</div>) :
                         error ? (<div>Error occurred!</div>) : (
-                        <div>{dataDB}</div>
+                        <div>{JSON.stringify(dataDB)}</div>
                     ) }
 
             </Row>
